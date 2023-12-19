@@ -19,7 +19,7 @@ To get started with the JLox interpreter, follow these steps:
 
     ```bash
     git clone https://github.com/jp-ag/jplox.git
-    cd <project-name>
+    cd jplox
     ```
 
 2. Run the JLox interpreter:
