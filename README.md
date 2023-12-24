@@ -25,8 +25,7 @@ To get started with the JLox interpreter, follow these steps:
 2. Run the JLox interpreter:
 
     ```bash
-    javac com/craftinginterpreters/lox/*java
-    java com.craftinginterpreters.lox.Lox [path_to_file]
+    mvn exec:java [-Dexec.args="path_to_file"]
     ```
 
 3. Explore the source code and experiment with the language features.
