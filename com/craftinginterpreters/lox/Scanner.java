@@ -60,8 +60,10 @@ class Scanner {
             case '/':
                 if(match('/')){
                     //A comment goes until end of line.
-                    while(peek() != '\n' && !isAtEnd()){advance();}
-                }else{
+		    while(peek() != '\n' && !isAtEnd()){advance();}
+                }else if(match('*')){
+		    commentBlock();
+		}else{
                     addToken(SLASH);
                 }
                 break;
@@ -87,6 +89,33 @@ class Scanner {
                 }
                 break;
         }
+    }
+
+    private void commentBlock(){
+	int nesting = 1;
+	while(nesting > 0){
+	    if(isAtEnd()){
+		Lox.error(line, "Unfinished comment block");
+		return;
+	    } 
+	    
+	    if(peek() == '*' && peekNext() == '/'){
+	        nesting--;
+		advance();
+		advance();
+		continue;
+            }
+
+	    if(peek() == '/' && peekNext() == '*'){
+	        nesting++;
+		advance();
+		advance();
+		continue;
+            }
+	    
+            if(peek() == '\n'){ line++;}
+	    advance();
+	}
     }
 
     private void identifier(){
