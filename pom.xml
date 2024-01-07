@@ -12,6 +12,7 @@
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+	<main.class>com.craftinginterpreters.lox.Lox</main.class>
     </properties>
    
    
@@ -33,7 +34,7 @@
                 </execution>
             </executions>
             <configuration>
-                <mainClass>com.craftinginterpreters.lox.Lox</mainClass>
+                <mainClass>${main.class}</mainClass>
             </configuration>
         </plugin>
    	</plugins>
