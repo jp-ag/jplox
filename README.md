@@ -33,7 +33,8 @@ To get started with the JLox interpreter, follow these steps:
 Note: You can run the tool in tool/GenerateAst with 
 
 ```bash
-mvn exec:java -Dexec.mainClass="com.craftinginterpreters.tool.GenerateAst" -Dexec.args="path_to_output"
+mvn exec:java -Dmain.class="com.craftinginterpreters.tool.GenerateAst" -Dexec.args="output_path"
+
 
 ## Progress
 
