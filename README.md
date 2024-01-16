@@ -30,6 +30,11 @@ To get started with the JLox interpreter, follow these steps:
 
 3. Explore the source code and experiment with the language features.
 
+Note: You can run the tool in tool/GenerateAst with 
+
+```bash
+mvn exec:java -Dexec.mainClass="com.craftinginterpreters.tool.GenerateAst" -Dexec.args="path_to_output"
+
 ## Progress
 
 - [x] Setup project structure
