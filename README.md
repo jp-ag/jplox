@@ -34,7 +34,7 @@ Note: You can run the tool in tool/GenerateAst with
 
 ```bash
 mvn exec:java -Dmain.class="com.craftinginterpreters.tool.GenerateAst" -Dexec.args="output_path"
-
+```
 
 ## Progress
 
